@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import WelcomePage from './pages/WelcomePage/WelcomePage';
 import Login from './pages/Login/Login';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -21,6 +22,13 @@ function App() {
           >
             <Login />
           </Route>
+          <Route
+            exact={true}
+            path="/register"
+          >
+            <Register />
+          </Route>
+
         </Switch>
       </BrowserRouter>
     </div>
