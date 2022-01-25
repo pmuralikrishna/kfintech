@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import WelcomePage from './pages/WelcomePage/WelcomePage';
 import Login from './pages/Login/Login';
 import Register from './pages/Register';
+import Users from './pages/Users';
 import { Provider } from "react-redux";
 import store from './redux/store';
 
@@ -30,6 +31,12 @@ function App() {
             path="/register"
           >
             <Register />
+          </Route>
+          <Route
+            exact={true}
+            path="/users"
+          >
+            <Users />
           </Route>
 
         </Switch>
