@@ -4,9 +4,12 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import WelcomePage from './pages/WelcomePage/WelcomePage';
 import Login from './pages/Login/Login';
 import Register from './pages/Register';
+import { Provider } from "react-redux";
+import store from './redux/store';
 
 function App() {
   return (
+    <Provider store={store}>
     <div className="App">
       <BrowserRouter>
         <Switch>
@@ -32,6 +35,7 @@ function App() {
         </Switch>
       </BrowserRouter>
     </div>
+    </Provider>
   );
 }
 
